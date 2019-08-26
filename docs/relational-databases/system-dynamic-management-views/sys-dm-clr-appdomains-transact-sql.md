@@ -46,7 +46,7 @@ ms.author: sstein
 |**survived_memory_kb**|**bigint**|Number of kilobytes that survived the last full, blocking collection and that are known to be referenced by the current application domain. This is equivalent to **System.AppDomain.MonitoringSurvivedMemorySize**.|  
   
 ## Remarks  
- There is a one-to-may relationship between **dm_clr_appdomains.appdomain_address** and **dm_clr_loaded_assemblies.appdomain_address**.  
+ There is a one-to-many relationship between **dm_clr_appdomains.appdomain_address** and **dm_clr_loaded_assemblies.appdomain_address**.  
   
  The following tables list possible **state** values, their descriptions, and when they occur in the **AppDomain** lifecycle. You can use this information to follow the lifecyle of an **AppDomain** and to watch for suspicious or repetitive **AppDomain** instances unloading, without having to parse the Windows Event Log.  
   
