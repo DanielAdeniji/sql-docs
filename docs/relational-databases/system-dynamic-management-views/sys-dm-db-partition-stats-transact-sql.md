@@ -49,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**distribution_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The unique numeric id associated with the distribution.|  
   
 ## Remarks  
- **sys.dm_db_partition_stats** displays information about the space used to store and manage in-row data LOB data, and row-overflow data for all partitions in a database. One row is displayed per partition.  
+ **sys.dm_db_partition_stats** displays information about the space used to store and manage in-row data, LOB data, and row-overflow data for all partitions in a database. One row is displayed per partition.  
   
  The counts on which the output is based are cached in memory or stored on disk in various system tables.  
   
@@ -58,6 +58,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  If a heap or index is not partitioned, it is made up of one partition (with partition number = 1); therefore, only one row is returned for that heap or index. The [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) catalog view can be queried for metadata about each partition of all the tables and indexes in a database.  
   
  The total count for an individual table or an index can be obtained by adding the counts for all relevant partitions.  
+ 
+ The followowing types of tables are not tallied :-
+ 
+ 1) Memory Optimized tables
   
 ## Permissions  
  Requires VIEW DATABASE STATE permission to query the **sys.dm_db_partition_stats** dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
