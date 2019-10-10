@@ -194,7 +194,7 @@ Before you apply a different collation to a database, make sure that the followi
 - You are the only one currently using the database.
 - No schema-bound object depends on the collation of the database.
 
-If the following objects, which depend on the database collation, exist in the database, the ALTER DATABASE*database_name*COLLATE statement will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message for each object blocking the `ALTER` action:
+If the following objects, which depend on the database collation, exist in the database, the ALTER DATABASE *database_name* COLLATE statement will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message for each object blocking the `ALTER` action:
 
 - User-defined functions and views created with SCHEMABINDING
 - Computed columns
